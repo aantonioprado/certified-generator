@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "gerador-certificado": {
+    "certified-generator": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -55,10 +55,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "gerador-certificado:build:production"
+              "buildTarget": "certified-generator:build:production"
             },
             "development": {
-              "buildTarget": "gerador-certificado:build:development"
+              "buildTarget": "certified-generator:build:development"
             }
           },
           "defaultConfiguration": "development"
