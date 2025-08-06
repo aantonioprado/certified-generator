@@ -45,14 +45,14 @@
     <div class="activity-group">
       <label class="form-label">Lista de atividades</label>
       <div class="item-list w-100">
-        @for (activity of activitys; track $index) {
+        @for (activity of activities; track $index) {
           <div class="item">
             <span class="item-text">{{activity}}</span>
             <div class="remove-btn" (click)="removeActivity($index)">
               <i class="ph-bold ph-x remove-btn"></i>
             </div>
           </div>
-          @if ($index + 1 != activitys.length) {
+          @if ($index + 1 != activities.length) {
             <hr />
           }
         }

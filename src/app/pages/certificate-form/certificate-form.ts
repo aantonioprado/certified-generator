@@ -13,22 +13,22 @@ import { CommonModule } from '@angular/common';
 export class CertificateForm {
   name: string = '';
   activity: string = '';
-  activitys: string[] = [];
+  activities: string[] = [];
 
   fieldEmpty(control: NgModel) {
     return control.invalid && control.touched;
   }
 
   formValid() {
-    return this.activitys.length > 0 && this.name.length > 0;
+    return this.activities.length > 0 && this.name.length > 0;
   }
 
   addActivity() {
-    this.activitys.push(this.activity);
+    this.activities.push(this.activity);
     this.activity = '';
   }
 
   removeActivity(index: number) {
-    this.activitys.splice(index, 1);
+    this.activities.splice(index, 1);
   }
 }
