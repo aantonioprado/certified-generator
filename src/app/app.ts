@@ -9,7 +9,7 @@ import { Certificate } from './pages/certificate/certificate';
 
 @Component({
   selector: 'app-root',
-  imports: [Navbar, CommonModule, BaseUi, Certificate, Certificates, CertificateForm],
+  imports: [Navbar, CommonModule, BaseUi, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
