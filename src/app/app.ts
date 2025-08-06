@@ -4,10 +4,12 @@ import { CommonModule } from '@angular/common';
 import { Navbar } from './_components/navbar/navbar';
 import { BaseUi } from './_components/base-ui/base-ui';
 import { Certificates } from './pages/certificates/certificates';
+import { CertificateForm } from './pages/certificate-form/certificate-form';
+import { Certificate } from './pages/certificate/certificate';
 
 @Component({
   selector: 'app-root',
-  imports: [Navbar, CommonModule, BaseUi, Certificates],
+  imports: [Navbar, CommonModule, BaseUi, Certificate, Certificates, CertificateForm],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
