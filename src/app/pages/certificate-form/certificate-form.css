@@ -77,6 +77,10 @@ label {
   color: #3b5ac2;
 }
 
+.custom-input-group {
+  margin-bottom: 20px;
+}
+
 .error-message {
   gap: 4px;
 }
