@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
-    <a class="navbar-logo">
+    <a class="navbar-logo" routerLink="/">
       <img src="navbar/logo.svg" alt="Gerador de Certificados" />
     </a>
 
@@ -8,11 +8,11 @@
       <ul class="navbar-nav">
         <li class="nav-item d-flex align-items-center">
           <i class="ph ph-medal active"></i>
-          <a class="nav-link active p-0">Lista de Certificados</a>
+          <a routerLink="/" class="nav-link active p-0">Lista de Certificados</a>
         </li>
         <li class="nav-item d-flex align-items-center">
           <i class="ph ph-circles-three-plus"></i>
-          <a class="nav-link p-0">Gerar Certificado</a>
+          <a routerLink="certificados/novo" class="nav-link p-0">Gerar Certificado</a>
         </li>
       </ul>
     </div>
