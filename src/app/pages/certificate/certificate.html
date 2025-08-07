@@ -5,11 +5,11 @@
       <p class="m-0">Voltar</p>
     </div>
     @if (certificate) {
-      <app-secondary-button text="Downlaod" icon="downlaod-simple"></app-secondary-button>
+      <app-secondary-button text="Downlaod" icon="download-simple" (click)="downlaodCertified()"></app-secondary-button>
     }
   </div>
   @if (certificate) {
-    <div class="certificate d-flex justify-content-center align-items-center">
+    <div #certifiedContainer class="certificate d-flex justify-content-center align-items-center">
       <img class="icon-ribbon" src="certificate/ribbon.png" alt="ícone de medalha" />
       <div class="certificate-content">
         <img class="certificate-signature" src="certificate/signature.svg" alt="assinatura" />
