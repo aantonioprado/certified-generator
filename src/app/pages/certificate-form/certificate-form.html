@@ -40,7 +40,7 @@
           required
         />
       </div>
-      <app-secondary-button [text]="'Adicionar'" icon='plus' [disabled]="activity.length == 0" (click)="addActivity()"></app-secondary-button>
+      <app-secondary-button [text]="'Adicionar'" icon='plus' [disabled]="!activity || activity.length == 0" (click)="addActivity()"></app-secondary-button>
     </div>
     <div class="activity-group">
       <label class="form-label">Lista de atividades</label>
