@@ -5,6 +5,7 @@ import { FormsModule, NgModel } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Certificate } from '../../interfaces/certificate';
 import { certificateService } from '../../_services/certificate';
+import { v4 as uuidv4 } from 'uuid';
 
 @Component({
   selector: 'app-certificate-form',
@@ -16,6 +17,7 @@ export class CertificateForm {
   constructor(private certificateService: certificateService) {}
 
   certificate: Certificate = {
+    id: "",
     name: "",
     activities: [],
     dateIssue: ""
@@ -42,9 +44,10 @@ export class CertificateForm {
 
   submit() {
     if(!this.formValid) return;
-    this.certificate.dateIssue = this.getCurrentDate();
-    this.certificateService.addCertificate(this.certificate)
 
+    this.certificate.id = uuidv4();
+    this.certificate.dateIssue = this.getCurrentDate();
+    this.certificateService.addCertificate(this.certificate);
   }
 
   getCurrentDate() {

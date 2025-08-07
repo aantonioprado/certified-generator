@@ -8,6 +8,6 @@ export class certificateService {
   certificates: Certificate[] = [];
 
   addCertificate(certificate: Certificate) {
-    this.certificates.push(certificate);
+    this.certificates.push({... certificate});
   }
 }
