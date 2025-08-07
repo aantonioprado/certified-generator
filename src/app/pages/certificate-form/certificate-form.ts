@@ -55,11 +55,10 @@ export class CertificateForm {
     this.certificate.dateIssue = this.getCurrentDate();
     this.certificateService.addCertificate(this.certificate);
 
-    this.certificate = this.stateInitCertificate();
-
-    this.form.resetForm();
-
     this.route.navigate(['certificados', this.certificate.id]);
+
+    this.certificate = this.stateInitCertificate();
+    this.form.resetForm();
   }
 
   getCurrentDate() {
