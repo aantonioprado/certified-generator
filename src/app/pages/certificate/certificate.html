@@ -4,31 +4,30 @@
       <i class="ph ph-arrow-left"></i>
       <p class="m-0">Voltar</p>
     </div>
-    <app-secondary-button></app-secondary-button>
+    @if (certificate) {
+      <app-secondary-button text="Downlaod" icon="downlaod-simple"></app-secondary-button>
+    }
   </div>
-  <div class="certificate d-flex justify-content-center align-items-center">
-    <img class="icon-ribbon" src="certificate/ribbon.png" alt="ícone de medalha" />
-    <div class="certificate-content">
-      <img class="certificate-signature" src="certificate/signature.svg" alt="assinatura" />
-      <div class="certificate-info d-flex flex-column align-items-center">
-        <div class="certificate-group-title">
-          <h1>CERTIFICADO DE CONCLUSÃO</h1>
-          <p>Este certificado comprova que</p>
+  @if (certificate) {
+    <div class="certificate d-flex justify-content-center align-items-center">
+      <img class="icon-ribbon" src="certificate/ribbon.png" alt="ícone de medalha" />
+      <div class="certificate-content">
+        <img class="certificate-signature" src="certificate/signature.svg" alt="assinatura" />
+        <div class="certificate-info d-flex flex-column align-items-center">
+          <div class="certificate-group-title">
+            <h1>CERTIFICADO DE CONCLUSÃO</h1>
+            <p>Este certificado comprova que</p>
+          </div>
+          <p class="certificate-student-name">{{certificate.name}}</p>
+          <div class="certificate-list-group">
+            <p class="mb-2 certificate-list-title">
+              Concluiu com sucesso as seguintes atividades:
+            </p>
+            <p class="certificate-list">{{certificate.activities.join(", ")}}</p>
+          </div>
         </div>
-        <p class="certificate-student-name">Ana Silva Lopes</p>
-        <div class="certificate-list-group">
-          <p class="mb-2 certificate-list-title">
-            Concluiu com sucesso as seguintes atividades:
-          </p>
-          <p class="certificate-list">
-            Introdução ao Angular, Configuração com Angular CLI, Criação de
-            componentes reutilizáveis, Manipulação de dados, Implementação de
-            data binding, Criação de rotas com Angular Router, Consumo de APIs
-            REST
-          </p>
-        </div>
+        <p class="certificate-date-issue">Emitido em {{certificate.dateIssue}}</p>
       </div>
-      <p class="certificate-date-issue">Emitido em 25/04/2025</p>
     </div>
-  </div>
+  }
 </div>
