@@ -22,12 +22,11 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Extract repo name
         id: extract_repo
-        run: |
-          echo "REPO_NAME=$(basename $GITHUB_REPOSITORY)" >> $GITHUB_ENV
+        run: echo "REPO_NAME=$(basename $GITHUB_REPOSITORY)" >> $GITHUB_ENV
 
       - name: Build Angular project
         run: npm run build -- --base-href "/${{ env.REPO_NAME }}/"
