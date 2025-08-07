@@ -8,6 +8,6 @@ import { RouterLink } from '@angular/router';
   templateUrl: './certificate.html',
   styleUrl: './certificate.css'
 })
-export class Certificate {
+export class CertificateComponent {
 
 }
