@@ -8,7 +8,7 @@
     <div class="custom-input-group">
       <label class="form-label" for="name">Nome</label>
       <input
-        [(ngModel)]="name"
+        [(ngModel)]="certificate.name"
         #nameRef="ngModel"
         maxlength="150"
         type="text"
@@ -45,19 +45,19 @@
     <div class="activity-group">
       <label class="form-label">Lista de atividades</label>
       <div class="item-list w-100">
-        @for (activity of activities; track $index) {
+        @for (activity of certificate.activities; track $index) {
           <div class="item">
             <span class="item-text">{{activity}}</span>
             <div class="remove-btn" (click)="removeActivity($index)">
               <i class="ph-bold ph-x remove-btn"></i>
             </div>
           </div>
-          @if ($index + 1 != activities.length) {
+          @if ($index + 1 != certificate.activities.length) {
             <hr />
           }
         }
       </div>
     </div>
-    <app-primary-button text='Gerar Certificado' [disabled]="!formValid()"></app-primary-button>
+    <app-primary-button (click)="submit()" text='Gerar Certificado' [disabled]="!formValid()"></app-primary-button>
   </form>
 </div>
