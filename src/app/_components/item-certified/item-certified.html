@@ -1,8 +1,8 @@
 <div class="card p-3 custom-card">
   <div class="d-flex justify-content-between align-items-center">
     <div>
-      <div class="fw-bold student-name">Nome do aluno</div>
-      <small class="small-date">Gerado em 21/04/2025</small>
+      <div class="fw-bold student-name">{{nameStudent}}</div>
+      <small class="small-date">Gerado em {{dateIssue}}</small>
     </div>
     <app-secondary-button (click)="redirectCertificate()" text="Ver"></app-secondary-button>
   </div>
