@@ -11,7 +11,7 @@ import { SecondaryButton } from '../secondary-button/secondary-button';
 export class ItemCertified {
   @Input() nameStudent: string = '';
   @Input() dateIssue: string = '';
-  @Input() id: number = 0;
+  @Input() id: string = '';
 
   constructor(private router: Router) {}
 
